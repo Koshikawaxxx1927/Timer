@@ -1,0 +1,16 @@
+@use "mq" as *;
+
+$cAqua: aqua;
+$cRed: red;
+$cWhite: white;
+$cBlack: black;
+$cBackground: rgb(227, 227, 227);
+$cInnerTimer: rgb(79, 255, 214);
+$lsmOuterTimer: 250px;
+$lmdOuterTimer: 300px;
+$llgOuterTimer: 400px;
+$lxlOuterTimer: 550px;
+$lsmInnerTimer: $lsmOuterTimer * 0.7;
+$lmdInnerTimer: $lmdOuterTimer * 0.75;
+$llgInnerTimer: $llgOuterTimer * 0.75;
+$lxlInnerTimer: $lxlOuterTimer * 0.75;

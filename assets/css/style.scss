@@ -1,0 +1,80 @@
+@use "mq" as *;
+@use "variable" as *;
+@use "font-size" as *;
+
+body {
+    background-color: $cBackground;
+}
+
+.container {
+    & div {
+        position: absolute;
+        width: $lsmOuterTimer;
+        height: $lsmOuterTimer;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        @include mq(md) {
+            width: $lmdOuterTimer;
+            height: $lmdOuterTimer;
+        }
+        @include mq(lg) {
+            width: $llgOuterTimer;
+            height: $llgOuterTimer;
+        }
+        @include mq(xl) {
+            width: $lxlOuterTimer;
+            height: $lxlOuterTimer;
+        }
+    }
+    & .outer-timer {
+        z-index: 1;
+        background-color: $cWhite;
+    }
+    & .inner-timer {
+        z-index: 4;
+        background-color: $cBlack;
+        width: $lsmInnerTimer;
+        height: $lsmInnerTimer;
+        @include mq(md) {
+            width: $lmdInnerTimer;
+            height: $lmdInnerTimer;
+        }
+        @include mq(lg) {
+            width: $llgInnerTimer;
+            height: $llgInnerTimer;
+        }
+        @include mq(xl) {
+            width: $lxlInnerTimer;
+            height: $lxlInnerTimer;
+        }
+    }
+    & .timer-title {
+        z-index: 5;
+        margin: 0 auto;
+        color: $cWhite;
+        height: 30px;
+        width: 100px;
+        font-size: $font-sm;
+        @include mq(md) {
+            font-size: $font-md;
+            height: 50px;
+            width: 160px;
+        }
+        @include mq(lg) {
+            font-size: $font-lg;
+            height: 60px;
+            width: 210px;
+        }
+        @include mq(xl) {
+            font-size: $font-xl;
+            height: 90px;
+            width: 310px;
+        }
+    }
+    & .time-meter {
+        z-index: 3;
+        background: conic-gradient($cAqua 0deg, $cWhite 0deg);
+    }
+}
