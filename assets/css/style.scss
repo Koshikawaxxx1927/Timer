@@ -78,3 +78,51 @@ body {
         background: conic-gradient($cAqua 0deg, $cWhite 0deg);
     }
 }
+
+.message {
+    & div {
+        margin: 10px;
+        @include mq(md) {
+            margin: 20px;
+        }
+        @include mq(lg) {
+            margin: 30px;
+        }
+        & span {
+            line-height: 15px;
+            font-size: 15px;
+            @include mq(md) {
+                line-height: 25px;
+                font-size: 25px;
+            }
+            @include mq(lg) {
+                line-height: 35px;
+                font-size: 35px;
+            }
+        }
+        & input {
+            margin-left: 10px;
+        }
+    }
+    & input {
+        text-align: center;
+        display: inline-block;
+        margin-top: 10px;
+        margin-left: 35px;
+        height: 30px;
+        font-size: 20px;
+        width: 20%;
+        @include mq(md) {
+            margin-top: 20px;
+            margin-left: 55px;
+            height: 50px;
+            font-size: 30px;
+        }
+        @include mq(lg) {
+            margin-top: 30px;
+            margin-left: 80px;
+            height: 60px;
+            font-size: 40px;
+        }
+    }
+}

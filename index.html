@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Timer to work</title>
-        <!-- <link href="https://unpkg.com/sanitize.css" rel="stylesheet" /> -->
+        <link rel="stylesheet" href="assets/css/sanitize.css" />
         <link rel="stylesheet" href="assets/css/style.css" />
     </head>
     <body>
@@ -15,6 +15,19 @@
             <div class="timer-title">00:00:00</div>
             <div class="time-meter"></div>
         </div>
+        <div class="message">
+            <div class="minustes-section">
+                <span>分:</span
+                ><input type="text" class="minutes" placeholder="0~" />
+            </div>
+            <div class="seconds-section">
+                <span>秒:</span
+                ><input type="text" class="seconds" placeholder="0~59" />
+            </div>
+            <input class="btn" type="submit" value="Start" />
+        </div>
     </body>
+    <script src="assets/js/Timer.js"></script>
+    <script src="assets/js/SendToTimer.js"></script>
     <script src="assets/js/main.js"></script>
 </html>

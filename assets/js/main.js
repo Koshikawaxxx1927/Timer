@@ -1,10 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
-    let $meter = document.querySelector(".time-meter");
-    let count = 0;
-    setInterval(() => {
-        let degree = count / 100;
-        $meter.style.background = `conic-gradient(aqua ${degree}deg, white ${degree}deg)`;
-        count++;
-        console.log(count);
-    }, 1);
+    const $btn = document.querySelector(".btn");
+    const $minutes = document.querySelector(".minutes");
+    const $seconds = document.querySelector(".seconds");
+    let timer;
+    $btn.addEventListener("click", () => {
+        timer = new SendToTimer($minutes, $seconds, $btn);
+        timer.color1 = "red";
+        timer.getTimer();
+    });
 });
