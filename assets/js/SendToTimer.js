@@ -27,6 +27,9 @@ class SendToTimer {
         if (this.DOM.minutes.value == "") {
             this.DOM.minutes.value = 0;
         }
+        if (this.DOM.seconds.value == "") {
+            this.DOM.seconds.value = 0;
+        }
         return (
             this.DOM.minutes.value >= 0 &&
             0 <= this.DOM.seconds.value &&
